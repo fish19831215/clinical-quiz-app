@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0f172a; /* slate-900 */
+  --foreground: #f8fafc; /* slate-50 */
+}
+
+body {
+  background-color: #0b0f19;
+  color: var(--foreground);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar for list selections */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.3);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(13, 148, 136, 0.4);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(13, 148, 136, 0.7);
+}
+
+/* Glassmorphism Helper Card */
+.glass-card {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Custom Animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.05);
+  }
+}
+
+.pulse-glow-teal {
+  animation: pulseGlow 4s infinite ease-in-out;
+  background: radial-gradient(circle, rgba(20, 184, 166, 0.2) 0%, rgba(0, 0, 0, 0) 70%);
+}
+
+.pulse-glow-rose {
+  animation: pulseGlow 3s infinite ease-in-out;
+  background: radial-gradient(circle, rgba(244, 63, 94, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+}
